@@ -38,8 +38,13 @@ public class Pessoa implements Comparable<Pessoa> {
         public int compareTo(Pessoa pessoa) {
 
              Integer idade =  getIdade();
-             return idade.compareTo(pessoa.getIdade());
+             int retorno =  idade.compareTo(pessoa.getIdade());
 
+                if (retorno == 0) {
+                    return this.nome.compareTo(pessoa.getNome());
+                }
+
+                return retorno;
         }
     }
 
