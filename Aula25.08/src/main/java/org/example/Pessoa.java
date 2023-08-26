@@ -1,7 +1,9 @@
 package org.example;
 
 import java.time.LocalDate;
-    public class Pessoa implements Comparable<Pessoa> {
+import java.time.Period;
+
+public class Pessoa implements Comparable<Pessoa> {
 
         private String nome;
 
@@ -17,6 +19,12 @@ import java.time.LocalDate;
             return nome;
         }
 
+        public int getIdade () {
+
+            return Period.between(dataDeNascimento, LocalDate.now()).getYears();
+
+        }
+
         @Override
         public String toString() {
             return "Pessoa{" +
@@ -27,9 +35,10 @@ import java.time.LocalDate;
 
         // Fazer a classe Pessoa ser ordenada pelos nomes das pessoas
         @Override
-        public int compareTo(org.example.Pessoa pessoa) {
+        public int compareTo(Pessoa pessoa) {
 
-            return this.nome.compareTo(pessoa.getNome());
+             Integer idade =  getIdade();
+             return idade.compareTo(pessoa.getIdade());
 
         }
     }

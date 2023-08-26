@@ -30,8 +30,8 @@ public class Ordenacao {
 
 
         List<Pessoa> listaPessoas = new ArrayList<>();
-        Pessoa vini = new Pessoa("Vini", LocalDate.of(1991, Month.DECEMBER, 15));
-        Pessoa amanda = new Pessoa("Amanda", LocalDate.of(1992, Month.APRIL, 12));
+        Pessoa vini = new Pessoa("Vini", LocalDate.of(1922, Month.DECEMBER, 15));
+        Pessoa amanda = new Pessoa("Amanda", LocalDate.of(2003, Month.APRIL, 12));
         Pessoa zed = new Pessoa("Zed", LocalDate.of(1999, Month.JANUARY, 20));
 
         listaPessoas.addAll(List.of(zed, amanda, vini));
